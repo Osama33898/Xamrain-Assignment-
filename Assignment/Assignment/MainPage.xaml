@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+                         x:Class="Assignment.MainPage">
+
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid
+        RowSpacing="0"
+        ColumnSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+
+        <BoxView 
+            Grid.Row="0"
+            BackgroundColor="#FF4500" />
+
+       
+
+        <Label 
+            Grid.Row="1"
+            Text="LOGIN"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <StackLayout                
+            Grid.Row="2"
+            VerticalOptions="Fill"
+            HorizontalOptions="Center"
+            Spacing="15">
+
+            <StackLayout HorizontalOptions="Center" Spacing="5">
+                <Label 
+                    Text="Email:" />
+                <Entry 
+                    Text="{ Binding Email }" 
+                    x:Name="Email"
+                    Keyboard="Email"
+                    WidthRequest="300" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Spacing="5">
+                <Label 
+                    Text="Password:" />
+                <Entry 
+                    Text="{ Binding Password }"
+                    x:Name="Password"
+                    WidthRequest="300"
+                    IsPassword="True" />
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="2"
+
+            VerticalOptions="End"
+            HorizontalOptions="Start"
+            Margin="10,0,0,15"
+            Spacing="15">
+
+            <Grid 
+     ColumnDefinitions="33.33*, 33.33*, 33.33*"
+     ColumnSpacing="8" 
+     HorizontalOptions="Center">
+                <Button Text="LOGIN" Grid.Column="0" HorizontalOptions="FillAndExpand"     Background="#e1275f"        Command="{Binding LoginCommand}"
+/>
+                <Button Text="SIGNUP" Grid.Column="1" HorizontalOptions="FillAndExpand"    Background="#e1275f"         Command="{Binding SignUpCommand}"
+/>
+            </Grid>
+        </StackLayout>
+      
+      
+
+      
+    </Grid>
+  
+</ContentPage>

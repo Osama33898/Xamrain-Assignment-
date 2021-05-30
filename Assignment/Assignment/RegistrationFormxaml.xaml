@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             xmlns:local="clr-namespace:SqliteReg"  
+             x:Class="Assignment.RegistrationFormxaml" Title="Registration Page">
+
+    <StackLayout                
+            VerticalOptions="Fill"
+            Spacing="15"
+        Padding="15"
+        >
+
+        <Entry x:Name="Title" Placeholder="Title"      Text="{ Binding Title }" 
+ ></Entry>
+
+        <Entry x:Name="Mobile" Placeholder="Mobile" Text="{ Binding Mobile }" ></Entry>
+        <Entry x:Name="Telefon" Placeholder="Telefon" Text="{ Binding Telefon }"></Entry>
+        <Entry x:Name="Corporation" Placeholder="Corporation" Text="{ Binding Corporation }"></Entry>
+        <Label  Text="Date Of Birth"></Label>
+        <DatePicker x:Name="DOB" ></DatePicker>
+        <Label Text="Address"></Label>
+        <Editor x:Name="Address" Text="{ Binding Address }"></Editor>
+
+        <Entry x:Name="Department" Placeholder="Department" Text="{ Binding Department }"></Entry>
+
+
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Save"  Command="{Binding RegisterCommand}" 
+                     Background="#e1275f"  
+                    ></Button>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>  

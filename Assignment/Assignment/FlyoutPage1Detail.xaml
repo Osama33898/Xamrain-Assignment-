@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+              x:Class="Assignment.FlyoutPage1Detail">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ListView x:Name="myListView" HasUnevenRows="True" >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                                <TextCell TextColor="Black"  Text="{Binding Title}"        Detail="{Binding Address}"   />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </StackLayout>
+            <ImageButton
+            Clicked="NavigateButton_OnClicked_To_Form"
+
+            AbsoluteLayout.LayoutBounds="0.95,0.95,80,80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="OrangeRed"
+            CornerRadius="40"
+            HeightRequest="80"
+            Source="ic_star.png"
+            WidthRequest="80" />
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>  
